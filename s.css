@@ -1,0 +1,42 @@
+html {z-index: 1; background-color: black; color: white; font-family: monospace; font-size: 22px; }
+body { margin: 0; padding: 0 }
+
+.action {
+  padding: 1em;
+  background-color: blueviolet;
+  color: white;
+  cursor: pointer;
+  position: fixed;
+  bottom: 0;
+  left:0;
+  right: 0;
+}
+.f {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.c {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.df {display: flex;}
+.sb {justify-content: space-between;}
+.cc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+*[onclick] {
+  cursor: pointer;
+  transition: all 200ms ease;
+}
+
+.show { display: block; }
+
+.hide { display: none; }
