@@ -46,3 +46,39 @@ function dgo(key) { return JSON.parse(window.localStorage.getItem(key))}
 function p(el) { return el.parentNode }
 function si(el) { return p(el).children }
 
+function obj(el) {
+    var o = {}
+    o.e = el.nodeName
+
+    if(el.attributes.length) {
+        o.a = {}
+        for(attr of el.attributes) {
+            o.a[attr.name] = attr.value
+        }
+    }
+
+    if(el.children.length) {
+        o.c = []
+        for(ch of el.children) {
+            o.c.push(objectify(ch))
+        }
+
+        const cln = el.cloneNode(true)
+
+        const cl = cln.children.length
+
+        for(var i = 0; i < cl; i++) {
+            cln.children[0].remove()
+        }
+        
+        if(cln.innerText && cln.innerText.length) {
+            o.t = cln.innerText.trim()
+        }
+
+    }
+    else if(el.innerText && el.innerText.length ) { 
+        o.t = el.innerText.trim()
+    }
+
+    return o
+}
