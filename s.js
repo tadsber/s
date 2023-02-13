@@ -1,8 +1,16 @@
+//returns element by ID
 function e(id) { return document.getElementById(id) }
-function show(id) { e(id).style.display = 'block' }
+
+//changes elements display property
+function show(id, d = 'block') { e(id).style.display = d }
+
+//changes elements display property to none
 function hide(id) { e(id).style.display = 'none' }
+
 function q(query) { return document.querySelector(query) }
+
 function qa(query) { return document.querySelectorAll(query) }
+
 function qe(el, query) { return el.querySelector(query) }
 function qea(el, query) { return el.querySelectorAll(query) }
 function t(el, text) { el.innerText = text || '' }
