@@ -1,0 +1,22 @@
+{
+  "name": "srcsjs",
+  "version": "0.0.1",
+  "description": "Simplified web development",
+  "main": "s.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tadsber/s.git"
+  },
+  "keywords": [
+    "JavaScript"
+  ],
+  "author": "Tadas",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tadsber/s/issues"
+  },
+  "homepage": "https://github.com/tadsber/s#readme"
+}
